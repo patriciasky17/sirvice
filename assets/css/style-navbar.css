@@ -3,16 +3,19 @@
 --------------------------------------------------------------*/
 header {
     width: 100%;
-    background: var(--background-color);
+    background: linear-gradient(180deg, #E9F7FF 0%, rgba(233, 247, 255, 0) 82.08%);
     top: 0;
     position: fixed;
     transition: 0.2s all ease-in-out;
     box-shadow: 0px 4px 4px rgba(146, 146, 146, 0);
-    border-bottom: 0.1px solid rgba(146, 146, 146, 0);
+    border-bottom: 0px solid rgba(146, 146, 146, 0);
+    z-index: 10000000;
 }
 
 .container {
     padding: 0px 5%;
+    max-width: 1440px;
+    margin: auto;
 }
 
 .navigation-bar > * {
@@ -35,6 +38,7 @@ header.header-scrolled {
     box-shadow: 0px 4px 4px rgba(146, 146, 146, 0.2);
     border-bottom: 0.1px solid rgba(146, 146, 146, 0.389);
     transition: 0.2s all ease-in-out;
+    background: var(--background-color);
 }
 
 nav#navbar.navbar .login-and-register{
