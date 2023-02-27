@@ -181,3 +181,69 @@ main {
 }
 /* End of Welcome Section */
 
+
+/* Service Offer Section */
+#service-offer {
+    padding: 100px 0;
+}
+
+#service-offer > .container > h2.service-offer-title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+#service-offer > .container > .offer-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    height: 100%;
+}
+
+#service-offer > .container > .offer-cards > .card {
+    margin: 0 auto 15px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease-in-out;
+}
+
+#service-offer > .container > .offer-cards > .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+#service-offer > .container > .offer-cards > .card > .service-detail-title {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    #service-offer > .container > h2.service-offer-title {
+        font-size: 30px;
+        line-height: 56px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #service-offer > .container > h2.service-offer-title {
+        font-size: 24px;
+        line-height: 48px;
+    }
+}
+
+
+/* End of Welcome Section */
