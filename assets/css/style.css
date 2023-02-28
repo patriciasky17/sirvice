@@ -247,3 +247,150 @@ main {
 
 
 /* End of Welcome Section */
+
+
+
+/* Why Us Section */
+
+#why-sirvice {
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+#why-sirvice > .container > h2.why-sirvice-title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+#why-sirvice > .container > .carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#why-sirvice > .container > .carousel > .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    white-space: wrap;
+    transition: all 0.8s ease;
+}
+
+#why-sirvice > .container > .carousel > .carousel-container > .why-sirvice-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 33%;
+    scale: 0.8;
+    filter: grayscale(1);
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    margin: 5px;
+    transition: all 0.8s ease;
+}
+
+#why-sirvice > .container > .carousel > .carousel-container > .why-sirvice-card.active {
+    scale: 1;
+    filter: grayscale(0);
+    transition: all 0.8s ease;
+}
+
+#why-sirvice > .container > .carousel > .carousel-container > .why-sirvice-card > h2 {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    padding: 30px 0 20px 0;
+}
+
+#why-sirvice > .container > .carousel > .carousel-container > .why-sirvice-card > p {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#why-sirvice > .container > .carousel > .carousel-container > .why-sirvice-card > .why-sirvice-vector {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#why-sirvice > .container > .carousel > .carousel-container > .why-sirvice-card > .why-sirvice-vector > svg{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#why-sirvice > .container > .carousel > .controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 100px;
+}
+
+#why-sirvice > .container > .carousel > .controls > button {
+    border: none;
+    background-color: var(--background-color);
+}
+
+#why-sirvice > .container > .carousel > .controls > button.bi {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 900px) {
+    #why-sirvice > .container > h2.why-sirvice-title {
+        font-size: 30px;
+        line-height: 56px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #why-sirvice > .container > .carousel > .carousel-container {
+        width: 200%;
+    }
+
+    #why-sirvice > .container > .carousel > .carousel-container > .why-sirvice-card {
+        width: 100%;
+        overflow-x: visible;
+    }
+
+    #why-sirvice > .container {
+        padding: 20px 0px;
+        overflow-x: hidden;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #why-sirvice > .container > h2.why-sirvice-title {
+        font-size: 24px;
+        line-height: 48px;
+    }
+
+    #why-sirvice > .container > .carousel > .carousel-container {
+        width: 250%;
+    }
+
+    #why-sirvice > .container > .carousel > .carousel-container > .why-sirvice-card > .why-sirvice-vector > svg{
+        width: 80%;
+    }
+
+    
+}
+
+
+/* End of Why Us Section */
