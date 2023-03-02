@@ -407,6 +407,12 @@ main {
     font-weight: 500;
 }
 
+/* Test it again for next with this */
+/* https://codepen.io/EvilDeeds/pen/JjWLjox */
+
+/* buat loader, ini tambahan aja */
+/* https://loading.io/css/ */
+
 #testimonial > .all-testimonial-cards {
     background: white;
     margin: auto;
@@ -509,4 +515,175 @@ main {
     font-weight: 600;
 } 
 
+@media screen and (max-width: 900px) {
+    #testimonial > .container > h2.testimonial-title {
+        font-size: 30px;
+        line-height: 56px;
+    }
+}
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 768px) {
+    #testimonial > .all-testimonial-cards > .testimonial-cards > .testimonial-card {
+        width: 300px;
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(-1750px);
+        }
+        25% {
+            transform: translateX(-200px);
+        }
+        50% {
+            transform: translateX(-1750px);
+        }
+        75% {
+            transform: translateX(-200px);
+        }
+        100% {
+            transform: translateX(-1750px);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #testimonial > .container > h2.testimonial-title {
+        font-size: 24px;
+        line-height: 48px;
+    }   
+}
+
+@media screen and (max-width: 480px) {
+    #testimonial > .all-testimonial-cards > .testimonial-cards > .testimonial-card {
+        width: 250px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(-1800px);
+        }
+        25% {
+            transform: translateX(-300px);
+        }
+        50% {
+            transform: translateX(-1800px);
+        }
+        75% {
+            transform: translateX(-300px);
+        }
+        100% {
+            transform: translateX(-1800px);
+        }
+    }
+}
+
 /* End of Testimonial Section */
+
+/* FAQ Section */
+#faq {
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+#faq > .container > h2.faq-title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+#faq > .container > .accordion-body > .accordion {
+    color: black;
+    background-color: white;
+    padding: 20px;
+}
+
+#faq > .container > .accordion-body > .accordion > .container {
+    position: relative;
+    padding: 10px;
+}
+
+#faq > .container > .accordion-body > .accordion > .container > .label {
+    position: relative;
+    padding: 10px 30px 10px 0px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+}
+
+#faq > .container > .accordion-body > .accordion > .container > .label::before {
+    content: '+';
+    color: var(--text-color);
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+
+#faq > .container > .accordion-body > .accordion > .container > .content {
+    position: relative;
+    display: none;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+    overflow: hidden;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#faq > .container > .accordion-body > .accordion > hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid var(--border-color);
+}
+
+#faq > .container > .accordion-body > .accordion > .container.active .content {
+    display: block;
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+}
+
+#faq > .container > .accordion-body > .accordion > .container.active .label::before {
+    content: '-';
+    font-size: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    #faq > .container > h2.faq-title {
+        font-size: 30px;
+        line-height: 56px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #faq > .container > h2.faq-title {
+        font-size: 24px;
+        line-height: 48px;
+    }   
+}
+
+/* End of FAQ Section */

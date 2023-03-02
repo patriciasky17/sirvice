@@ -75,3 +75,14 @@ on('click', '.scrollto', function (e) {
 }, true)
 
 
+/**
+ * For Accordion in Landing Page
+ */
+
+const accordion = document.getElementsByClassName('container');
+
+for (i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener('click', function () {
+        this.classList.toggle('active')
+    })
+}
