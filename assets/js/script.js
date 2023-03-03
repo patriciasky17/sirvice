@@ -32,6 +32,19 @@ const onscroll = (el, listener) => {
 }
 
 /**
+   * Preloader
+   */
+let preloader = select('#preloader');
+if (preloader) {
+    window.addEventListener('load', () => {
+        preloader.style.opacity = 0; 
+        setTimeout(() => {
+            preloader.remove(); 
+        }, 1000); 
+    });
+}
+
+/**
  * Toggle .header-scrolled class to #header when page is scrolled
  */
 let selectHeader = select('#header')
