@@ -4,8 +4,11 @@
     --border-color: #D9D9D9;
     --icon-color: #F5F5F5;
     --primary-color: #7CB5D5;
+    --button-text-primary-color: #FFFFFF;
     --quote-color: #F2F2F2;
     --footer-background-color: linear-gradient(180deg, rgba(233, 247, 255, 0) 44.06%, #E9F7FF 100%);
+
+    --dots-color: #BEE7FF;
 }
 
 html[data-theme='light'] {
@@ -14,8 +17,11 @@ html[data-theme='light'] {
     --border-color: #D9D9D9;
     --icon-color: #F5F5F5;
     --primary-color: #7CB5D5;
+    --button-text-primary-color: #FFFFFF;
     --quote-color: #F2F2F2;
     --footer-background-color: linear-gradient(180deg, rgba(233, 247, 255, 0) 44.06%, #E9F7FF 100%);
+
+    --dots-color: #BEE7FF;
 }
 
 /* Masih belum di implement */
