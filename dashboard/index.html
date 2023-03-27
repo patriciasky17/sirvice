@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../assets/css/style-loader.css">
 
     <link rel="stylesheet" href="../assets/css/style-sidebar.css">
+    <link rel="stylesheet" href="../assets/css/style-dashboard.css">
 
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -23,7 +24,7 @@
 </head>
 <body>
     <!-- Sidebar Start -->
-    <nav class="sidebar-navigation">
+    <nav class="sidebar-navigation open">
         <ul>
             <div class="logo">
                 <svg width="1033" height="1033" viewBox="0 0 1033 1033" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +48,7 @@
                 <span class="tooltip">Home</span>
             </li>
             <li>
-                <a href="#"></a><i class="material-icons-round">list_alt</i></a>
+                <a href="#"><i class="material-icons-round">list_alt</i></a>
                 <span class="tooltip">Order</span>
             </li>
             <li>
@@ -72,100 +73,224 @@
         </ul>
     </nav>
     <!-- Sidebar End -->
-
     
     <main>
         <!-- Header Start -->
         <header>
             <nav id="navbar-dashboard">
-                <div class="notification-sneakpeek">
-                    <button class="notification-dropdown">
-                        <i class="material-icons-round">
-                            notifications
-                        </i>
-                    </button>
-    
-                    <div class="notification-dropdown-content">
-                        <div class="notification-title-and-link">
-                            <h4>Notification</h4>
-                            <a href="#">View All</a>
-                        </div>
-    
-                        <div class="notification-all-messages">
-                            <a class="notification-message" href="#">
-                                <div class="icon-notification-mark">
-                                    <i class="material-icons-round info">info</i>
-                                </div>
-                                <div class="notification-detail-message">
-                                    <h5>You have Incoming Order Today</h5>
-                                    <p>Just a friendly reminder that you have an order scheduled for today! Our team is working hard to ensure that your
-                                        order is processed and delivered on time. You can check the progress of your order at any time on our website, and
-                                        we will keep you updated every step of the way.</p>
-                                    <time datetime="2022-04-12">Wednesday, 12 April 2022</time>
-                                </div>
-                            </a>
-    
-                            <a class="notification-message" href="#">
-                                <div class="icon-notification-mark">
-                                    <i class="material-icons-round check">check_circle</i>
-                                </div>
-                                <div class="notification-detail-message">
-                                    <h5>Order Successful!</h5>
-                                    <p>Congratulations, your order has been successfully processed! You can now check the progress of your order, and we
-                                        look forward to providing you with the best possible experience.</p>
-                                    <time datetime="2022-04-10">Monday, 10 April 2022</time>
-                                </div>
-                                
-                            </a>
-                            
-                        </div>
+                <div class="header-left" onclick="changeImage()">
+                    <div class="sidebar-toggle" id="hamburger">
+                        <i class="material-icons-round">menu</i>
+                    </div>
+
+                    <div class="sidebar-toggle" id="hamburger-close">
+                        <i class="material-icons-round">menu_open</i>
                     </div>
                 </div>
-                
-    
-                <div class="profile-sneakpeek">
-                    <button class="profile-dropdown">
-                        <img src="../assets/image/profile-example.png" alt="Profile Picture">
-                        <p class="fullname">Patricia Ho</p>
-                        <i class="material-icons-round">arrow_drop_down</i>
-                        <!-- <i class="material-icons-round">arrow_drop_up</i> -->
-                    </button>
+
+                <div class="sneakpeek">
+                    <div class="notification-sneakpeek">
+                        <button class="notification-dropdown">
+                            <i class="material-icons-round">
+                                notifications
+                            </i>
+                        </button>
         
-                    <div class="profile-dropdown-content">
-                        <div class="profile-general-info">
-                            <img src="../assets/image/profile-example.png" alt="Profile Picture">
-                            <div class="profile-info">
-                                <h6 class="fullname">Patricia Ho</h6>
-                                <p class="email-address">hopatricia9820@gmail.com</p>
+                        <div class="notification-dropdown-content">
+                            <div class="notification-title-and-link">
+                                <h4>Notification</h4>
+                                <a href="#">View All</a>
+                            </div>
+        
+                            <div class="notification-all-messages">
+                                <a class="notification-message" href="#">
+                                    <div class="icon-notification-mark">
+                                        <i class="material-icons-round info">info</i>
+                                    </div>
+                                    <div class="notification-detail-message">
+                                        <h5>You have Incoming Order Today</h5>
+                                        <p>Just a friendly reminder that you have an order scheduled for today! Our team is working hard to ensure that your
+                                            order is processed and delivered on time. You can check the progress of your order at any time on our website, and
+                                            we will keep you updated every step of the way.</p>
+                                        <time datetime="2022-04-12">Wednesday, 12 April 2022</time>
+                                    </div>
+                                </a>
+        
+                                <a class="notification-message" href="#">
+                                    <div class="icon-notification-mark">
+                                        <i class="material-icons-round check">check_circle</i>
+                                    </div>
+                                    <div class="notification-detail-message">
+                                        <h5>Order Successful!</h5>
+                                        <p>Congratulations, your order has been successfully processed! You can now check the progress of your order, and we
+                                            look forward to providing you with the best possible experience.</p>
+                                        <time datetime="2022-04-10">Monday, 10 April 2022</time>
+                                    </div>
+                                    
+                                </a>
+                                
                             </div>
                         </div>
+                    </div>
         
-                        <div class="profile-dropdown-menu">
-                            <a href="#">
-                                <i class="material-icons-round">person</i>
-                                <p>Profile</p>
-                            </a>
-                            <a href="#">
-                                <i class="material-icons-round">logout</i>
-                                <p>Logout</p>
-                            </a>
+                    <div class="profile-sneakpeek">
+                        <button class="profile-dropdown">
+                            <img src="../assets/image/profile-example.png" alt="Profile Picture">
+                            <p class="fullname">Patricia Ho</p>
+                            <i class="material-icons-round">arrow_drop_down</i>
+                            <!-- <i class="material-icons-round">arrow_drop_up</i> -->
+                        </button>
+            
+                        <div class="profile-dropdown-content">
+                            <div class="profile-general-info">
+                                <img src="../assets/image/profile-example.png" alt="Profile Picture">
+                                <div class="profile-info">
+                                    <h6 class="fullname">Patricia Ho</h6>
+                                    <p class="email-address">hopatricia9820@gmail.com</p>
+                                </div>
+                            </div>
+            
+                            <div class="profile-dropdown-menu">
+                                <a href="#">
+                                    <i class="material-icons-round">person</i>
+                                    <p>Profile</p>
+                                </a>
+                                <a href="#">
+                                    <i class="material-icons-round">logout</i>
+                                    <p>Logout</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
             </nav>
         </header>
         <!-- Header End-->
 
         <!-- Section Start -->
-        <section id="#home">
+        <section id="home">
             <div class="container">
                 <div class="welcome-for-user">
                     <div class="welcome-content">
-
+                        <h4 class="welcome">Welcome,</h4>
+                        <h1 class="username">Patricia Ho</h1>
+                        <p class="quote">“We’ll do our best to keep you breathing the fresh air!”</p>
                     </div>
                     <div class="welcome-mascot-image">
-                        
+                        <img src="../assets/image/mascot-welcome-crop.png" alt="Mascot Is Welcoming User">
+                    </div>
+                </div>
+
+                <div class="main-content">
+                    <div class="upcoming-order">
+                        <div class="upcoming-order-header">
+                            <h5 class="title">Upcoming Order</h5>
+                            <a href="#">View All</a>
+                        </div>
+                        <div class="upcoming-order-cards">
+                            <a class="upcoming-order-card" href="#">
+                                <div class="service-technician-status-info">
+                                    <div class="service-technician-info">
+                                        <div class="general-info">
+                                            <p class="service-type">Cleaning Air Conditioner</p>
+                                            <p class="technician-name">Aldy Kusuma</p>
+                                        </div>
+                                        <img src="../assets/image/technician-profile/technician-profile-1.png" alt="Technician Profile Picture">
+                                    </div>
+                                    <div class="status-progress-info">
+                                        <p class="status in-progress">In Progress</p>
+                                    </div>
+                                </div>
+
+                                <div class="date-time-location-info">
+                                    <div class="date-info">
+                                        <i class="material-icons-round">calendar_month</i>
+                                        <time datetime="2023-04-12">Wednesday, 12 April 2023</time>
+                                    </div>
+                                    <div class="time">
+                                        <i class="material-icons-round">access_time</i>
+                                        <time datetime="14:00">14:00 WIB</time>
+                                    </div>
+                                    <div class="location">
+                                        <i class="material-icons-round">location_on</i>
+                                        <address>Jl. Kebon Jeruk Raya No. 1, RT. 1/RW. 1, Kebon Jeruk, Kec. Kby. Baru, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530</address>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="upcoming-order-card" href="#">
+                                <div class="service-technician-status-info">
+                                    <div class="service-technician-info">
+                                        <div class="general-info">
+                                            <p class="service-type">Cleaning Air Conditioner</p>
+                                            <p class="technician-name">Aldy Kusuma</p>
+                                        </div>
+                                        <img src="../assets/image/technician-profile/technician-profile-1.png" alt="Technician Profile Picture">
+                                    </div>
+                                    <div class="status-progress-info">
+                                        <p class="status scheduled">Scheduled</p>
+                                    </div>
+                                </div>
+
+                                <div class="date-time-location-info">
+                                    <div class="date-info">
+                                        <i class="material-icons-round">calendar_month</i>
+                                        <time datetime="2023-04-12">Wednesday, 12 April 2023</time>
+                                    </div>
+                                    <div class="time">
+                                        <i class="material-icons-round">access_time</i>
+                                        <time datetime="14:00">14:00 WIB</time>
+                                    </div>
+                                    <div class="location">
+                                        <i class="material-icons-round">location_on</i>
+                                        <address>Jl. Kebon Jeruk Raya No. 1, RT. 1/RW. 1, Kebon Jeruk, Kec. Kby. Baru, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530</address>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="total-summary">
+                        <div class="total-order-card">
+                            <h5 class="title">Total Order</h5>
+                            <p class="total-order-number">12</p>
+                            <i class="material-icons-round">list_alt</i>
+                        </div>
+
+                        <div class="appointment-scheduled-card">
+                            <h5 class="title">Appointment Scheduled</h5>
+                            <p class="appointment-scheduled-number">2</p>
+                            <i class="material-icons-round">access_time</i>
+                        </div>
+
+                        <div class="global-ratings-card">
+                            <h5 class="title">Global Ratings</h5>
+                            <p class="global-ratings-number">4.5/5</p>
+                            <i class="material-icons-round">star_border</i>
+                        </div>
+                    </div>
+
+                    <div class="tips-and-tricks">
+                        <div class="tips-and-tricks-header">
+                            <h5 class="title">Tips & Tricks</h5>
+                            <a href="#">View All</a>
+                        </div>
+
+                        <div class="tips-and-tricks-cards">
+                            <div class="tips-and-tricks-card">
+                                <div class="tips-and-tricks-vector">
+                                    <img src="../assets/svg/tips-and-tricks-cleaning.svg" alt="">
+                                </div>
+                                <div class="tips-and-tricks-content">
+                                    <h6 class="title">"The importance of keeping your air filter clean”</h6>
+                                    <p class="description">Your air conditioning unit is like the superhero of your home - it saves you from the heat and humidity, keeps you comfortable and makes...</p>
+                                    <div class="go-to-detail-content">
+                                        <a class="read-more" href="#">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
